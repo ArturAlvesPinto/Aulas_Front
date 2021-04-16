@@ -1,0 +1,27 @@
+# Aula de teste TDD e BDD:
+
+npm install express --save-dev (para instalar as dependencias.)
+
+## Mocha
+
+npm i --save-dev mocha (Execute no console para instalar o mocha)
+
+Ferramenta para execução de testes. Teste Runner. Tem uma abordagem pensada em ser descritivo, segue padrões do BDD, baseando na regra de negócio para avaliar o código a ser feito.
+
+Pode ser utilizado em Node.JS ou no Browser. 
+
+O mocha por si só não disponibiliza uma ferramenta de assert. Sendo necessário utilizar o assert módulo interno do Node.js. Pa a isso é utilizar uma lib chamada "Chai"
+
+
+## Chai
+
+npm i --save-dev chai (Execute no console para instalar o chai)
+
+É um ferramenta de assert, similar ao módulo do Nose.js, porém de uma maneira muito mais decritiva. Então com isso consegue garantir que os teste sejam mais descritivos.
+
+
+## Sinon
+
+npm i --save-dev sinon (Execute no console para instalar o sinon)
+
+É usado para mocha api's, funções ou métodos. Assim é possível monitorar se elas foram invocadas pelo código testado.

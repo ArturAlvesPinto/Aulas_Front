@@ -1,0 +1,124 @@
+Manipulção de Array
+
+Criação:
+
+	const arr = [1, 2, 3];
+	const arr2 = new Array(1, 2, 3);
+	const arr = Array(3) // Cria um array com 3 posição vazias.
+	
+Array.of:
+	Cria uma nova instancia de array a partir do numero de parametros informados. 
+	Ex:
+		const arr = Array.of(1, 2, 3);
+		
+Array.from
+	Cria uma nova instancia de array a partir de um parametro array-like (node list(divs de um html)) ou interable object(set map). obrigatoriamente.
+	Ex:
+		const dvis = document.querySelectorAll('div'); // (node list) pegas todas as div no html
+		const arr = array.from(divs);
+	}
+	
+.push('array'); 		acrescenta 1 ou mais elementos no array. Retorna o tamanho do array atual.
+
+.pop('array'); 			retira o ultimo item do array. Retorna o item removido.
+
+.unshift('array'); 		acrescenta um elemento no inicio; Retorna tamanho atual
+
+.shift('array'); 		retira o 1º elemento do array; Retorna tamanho atual
+
+.concat(); 				Concatena um ou mais arrays retornando um novo array > array.concat('oOutroArray');
+
+.slice();				retorna um novo array que é um trecho do array informado, de acordo com inicio e fim. > aray.slice(indiceInicio, indiceFim);
+						caso seja passado um único parametro ele vai pegar a partir daquele índice se for negativa pega do fim pro começo.
+
+.splice()				altera uma array adicionando novos elementos enquanto remove elementos antigos. > array.splice(2)  // remove item do index 2 em diante
+						Ex:
+							array.splice(EmQualIndexVouMexer, quantosVouRemover, oQueÉAddAPartirDesseIndex);
+							
+.forEach()				Interação dentro de cada item do array. So intera os elementos. > array.forEach(valorItem,index,arrayAposIteracao)
+
+.map()					Além de interar cada item do array retorna um novo array > array.map(valur, index);
+
+.flat()					Retorna um novo array com todos elementos de um sub array, concatenados de forma recursiva de acordo com a propriedade especificada(depth)
+						Entre parentese é selecionado a profundidade, se for 1, só deixar vazio.
+						Ex:
+							const arr = [1,2[3[4]]];
+							arr.flat();  // [1,2,3[4]]
+							arr.flat(2); // [1,2,3,4]
+							
+.flatMap()				Junção do flat e do map. Rertorna novo array como map e da um flat em 1 de profundidade
+
+.keys()					Retrorna um array iterator que contém as chaves para cada elemento do array. Consigo saber quando acabou.
+						Ex:
+							const arr = [1,2,3,4]
+							const arrIterator = arrKeys();
+							arrIterator.next();
+							//{index:0, done:false}
+							arrIterator.next();
+							//{index:1, done:false}
+							arrIterator.next();
+							//{index:2, done:false}
+							arrIterator.next();
+							//{index:3, done:tru}
+							
+.value()				Retorna um array iterator que contém os valores para cada elementodo array. Ex:
+						const arr = [a,b,c,d]
+							const arrIterator = arrKeys();
+							arrIterator.next();
+							//{value:a, done:false}
+							arrIterator.next();
+							//{value:b, done:false}
+							arrIterator.next();
+							//{value:c, done:false}
+							arrIterator.next();
+							//{value:d, done:false}
+							
+.entry()				Retorna o par chave/valor do elemento. Junção do value e keys.
+
+.find()					Retorna o primeiro item do array que satisfaz a condição. arr.find(value => value > 2) // primeiro valor que é maior que dois
+
+.findIndex()			Retorna o índice do primeiro item de um array que satisfaz a condição. arr.find(value => value > 2) //primeiro índice do valor maior que dois
+
+.filter					Retorna um novo array com todos os elementos que satisfazem a condição.  arr.find(value => value > 2) // retorna novo array com valores > 2
+
+.indexOf				Retorna o primeiro índice em que um elemento por ser encontrado no array.
+
+.lastindexOf			Retorna o último índice em que um elemento pode ser encontrado no array.
+
+.includes				Retorna um booleano verificando se determinado elemento existe no array.
+						Ex:
+							const arr = [a,b,c,d];
+							const temItem = arr.includes(a); // tru
+							const temItem = arr.includes(1); // false
+							
+.some()					Retorna um booleano verificando se pelo menos um item de um array satisfaz a condição.
+						Ex:
+							const arr = [1,3,4,5];
+							const temItem = arr.some(value => value % 2 === 0 ); // verifica se tem algum item do array que é par(dividido por 2 com resto = 0)
+							// tru
+							
+.every()				Retorna um booleano verificando se todos itens do array satisfazem uma condição
+						Ex:
+							const arr = [1,3,4,5];
+							const temItem = arr.every(value => value % 2 === 0 ); // verifica se os itens do array que são par(dividido por 2 com resto = 0)
+							// false
+							
+.sort()					Ordena elementos de acordo com a condição
+						Ex:
+							const arr = [5,2,4,6];
+							const temItem = arr.sort((current,next)=> current - next); // [2,4,5,6]
+							const temItem = arr.sort((current,next)=> next - current); // [6,5,4,2]
+							
+.reverse()				Inverte os elementos de uma array
+
+.join()					Junta os elementos do array com um separador delimitador e retorna um string
+
+.reduce()				Retorna um novo tipo de dado iterando cada posição de uma array
+						Ex:
+							const arr = [5,2,4,6];
+							const temItem = arr.reduce(total,value => (total += value,0)); // soma elementos do array
+							// 17
+
+
+
+

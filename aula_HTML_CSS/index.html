@@ -1,0 +1,135 @@
+<!--Artur Alves Pinto-->
+<!--Código desenvolvido apenas para apredizado das ferramentas HTML5 e CSS3-->
+<!--OBS: Ao para o mouse em cima das tags é possível ler sobre cada uma-->
+<!--https://www.pexels.com/pt-br/ repositório gratuito de imagens-->
+
+<!Doctype html><!--Doctype, serve para informar que se trata de um documento html5-->
+<html lang="pt-br"><!--o lang serve para informar o idioma que está sendo utilizado-->
+
+    <head>
+        <meta charset="utf-8"><!--utf-8, the code padrão brasileiro que aceita acentos-->
+        <title>
+            Página inicial
+        </title><!--Nome que fica aparecendo na aba.-->
+        <link rel="stylesheet" type="text/css" href="CSS3/style.css"> <!--Aqui é criado um link para referenciar arquivos externos. Neste caso o CSS usado nesta página-->
+
+    </head><!--Onde ficam os metadados, the code -->
+
+
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+    <body><!--Corpo da página-->
+
+
+        <div> <!--Divisão do background em vários grids-->
+         
+        <p>Menu inicial</p><!--"p" é o elemento parágrafo-->
+
+        <nav><!--Usado para implementar menús de navegação-->
+
+            <p><b>Conheça sobre a nós:</b></p><!--comando b para deixar em negrito-->
+            <ul><!--Permite que seja inserido um lista de itens.-->
+                
+                <li><a href="#servicos">Serviços</a></li><!--tópico--> <!--Tag a adiciona ação de hiperlink - href referencia o hiper link - tem que colocar o # para mencionar um id-->
+                
+                <li><a href="#clientes">Clientes</a></li><!--tópico-->
+                
+                <li><a href="#parceiros">Parceiros</a></li><!--tópico-->
+                
+                <li><a href="#equipe">Equipe</a></li><!--tópico-->
+                
+                <li><a href="#contato">Contato</a></li><!--tópico-->
+
+            </ul>
+        </nav>
+        
+        </div>
+
+
+        <header><!--Cabeçalho da página-->
+            <h1>Nome do service</h1><!--Elemento h1 é o título da página, letra fica maior, tem h1 h2 h3 como se fosse níveis de títulos-->
+            <p>Vamos desenvolver serviços para sua empresa?</p>
+        </header>
+
+
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+        <section id="servicos"><!--Utilizado para separar seções de conteúdo. O id é criado para identificar cada senssão-->
+            <h2>Serviços</h2><!--Subtítulo-->
+            <p>Oferecemos serviços em desenvolvimento de sites e aplicativos!</p>
+            <p>Oferecemos serviços em desenvolvimento de sites e aplicativos!
+                Oferecemos serviços em desenvolvimento de sites e aplicativos!
+                Oferecemos serviços em desenvolvimento de sites e aplicativos!
+                Oferecemos serviços em desenvolvimento de sites e aplicativos!
+                Oferecemos serviços em desenvolvimento de sites e aplicativos!
+                Oferecemos serviços em desenvolvimento de sites e aplicativos!
+                Oferecemos serviços em desenvolvimento de sites e aplicativos!
+                Oferecemos serviços em desenvolvimento de sites e aplicativos!
+                Oferecemos serviços em desenvolvimento de sites e aplicativos!
+            </p>
+            <div>
+                <img src="img/trabalho.jpg" width="500px"><!--IMG é o comando de imagem e SRC usado para selecionar o diretório debusca. Comando width permiti selecionar os pixels-->
+            </div><!--Responsável por criar uma divisão. Cada imagem fica em uma div diferente. Não tendo isso elas ficam lado a lado.-->
+            <div>
+                <img src="img/trabalho 2.jpg" width="500px">
+            </div>         
+        </section>
+
+
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+        <section id="clientes">
+            <h2>Clientes</h2><!--Subtítulo-->
+            <p>Conheça nossos clientes</p>
+            <img src="img/Coffe break.png" width="250px"><!--IMG é o comando de imagem e SRC usado para selecionar o diretório debusca. Comando width permiti selecionar os pixels-->  
+        </section>
+
+
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+        <section id="parceiros">
+            <h2>Parceiros</h2><!--Subtítulo-->
+            <p>Estes são nosso parceiros:</p>
+            <a href="https://web.digitalinnovation.one/home" target="_blank">
+                <img src="img/cover_dio.jpg" width="300px">
+            </a><!--Assim é possível utilizar a imagem como um botão para ir para o link em questão-->
+                <!--O comadno target="_blank" é usado para que seja aberto uma nova aba.-->
+        </section>
+
+
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+        <section id="equipe">
+            <h2>Equipe</h2><!--Subtítulo-->
+            <p>Conheça nossa equipe!</p>
+            <div><img src="img/equipe.jpg" width="500px"></div>
+        </section>
+
+
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+        <section id="contato">
+            <h2>Contato</h2><!--Subtítulo-->
+            <p>Entre em contato conosco:</p>
+            <div>
+                <img src="img/tel.png"
+                width="65px" class="img_logo">
+                <a href="tel:9999999999"><p>(99)99999-9999</p> </a><!--tel e uma função que permite referenciar um telefone-->
+            </div>
+            <div>
+                <img src="img/mailto.jpg" 
+                width="50px" class="img_logo"> <!--Criação de uma classe para personalizar no css de maneiras diferentes as imagens-->
+                <a href="mailto:teste@email.com"><p>teste@email.com</p></a> <!--mailto e uma função que permite referenciar um email-->
+            </div>
+        </section>
+        <!--A criação de class permiti criar padrões de customização de elementos
+        faciliatando a edição de cada um deles. No arquivo css podemos definiar as características
+        de cada class que utilizamos.-->
+
+        
+<!--------------------------------------------------------------------------------------------------------------------------------------->
+        <footer><!--Rodapé da página.-->
+            <div class="rodape">
+            <p>Desenvolvido por Artur Alves</p>
+            </div>
+        </footer>
+
+    </body>
+
+
+
+</html>

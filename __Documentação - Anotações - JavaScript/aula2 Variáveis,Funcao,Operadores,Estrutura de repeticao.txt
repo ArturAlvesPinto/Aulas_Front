@@ -1,0 +1,112 @@
+JAVASCRIPT Variáveis:
+
+tipos primitivos
+
+-  	string = palavras e escritas
+
+	.length > retorna o tamanho da string
+	.split 	> retorna um arry quebrando string por um delimitador
+	.replace > troca uma parte da string (qual valor procurar, qual valor vai ter) 
+	.slice > retorna um trecho da string (posição começo, posição fim)
+	.substr > Retorna N caracters a partir de uma posição (posição começo, numero de caracters)
+	
+
+-	number = números
+
+	.toString > transforma o número em uma string
+	.toFixed > Delimita o numero de casas decimais
+	.parseFloat > Transforma uma string em float (numero com casas decimais)
+	.parseInt > Transforma uma string em Int (numero sem casas decimais)
+
+
+-	boolean = true ou false
+-	null = vazio ou nada
+
+
+-	undefined = quando a variável existe mas não foi definida ainda
+
+		typeof undefined > retorna o tipo da variável
+
+
+-	symbol = permit criar valores únicos. Mantem a informações com valor único, impedindo que propriedades com mesmo nome não sejam sobrescritas.
+			 usado para a criação de ENUM.
+	
+	.getOwnPropertySymbols > Exibi todos os symbols de um objeto
+	.ownKeys > Acessa todas propriedades do objeto
+	
+
+-	object = um objeto. Permite que seja armazenado uma ou mais propeidades e valores (chave : "valor")
+	
+	.keys > Recupera as chaves do objeto
+	.values > Recupera os valores das chaves do objeto
+	.entries > Retorna uma lista, array de arrays contendo strings que são: Nome da chave e Valor da chave
+	.assign > Megear propriedades dos objetos. Concatena um outro objeto ao atualo com chave:"valor". (Não aconselhada, sempre crie um novo objeto passando a concatenação e mantenha o principal intácto)
+	.freeze > impede que o objeto seja alterado. Congela tudo. Não permite criar, deletar e alterar propriedade.
+	.seal > similar ao freeze. Congela apenas criação e deleção. Permite alteração da propriedade.
+	
+
+-	function = função para chamada de objeto. Funções tambem são objetos. Podem receber parametros. Podem receber funções.
+	
+	arrowFn = () => {'condição/validações'; return 'code here';} :o mesmo que:  function fn() {'condição/validações'; return 'code here';} > não recebe parametroe o retorno é uma srting 'code here'
+	fn.'algumobjeto' = 'informaçãoObjeto' > funções tambem podem criar objetos.
+
+	diferenção de função e arrowFn = Contexto de criação. arrowFn, o this.'object' sempre aponta pro escopo geral({}) retornando indepente da posição no code o this.'object'
+
+
+-	arry = objeto, mas que se relaciona com seus próprios itens. Permite várias outas estrutura de dados dentro de sua estrutura.
+	
+	.length > retorna a quantidade de itens do arrays
+	.slice > copia o array
+	.isArray > verifica se é array
+	.forEach > iterar os itens do array
+	.filter > filtram o array
+	.map > retorna um novo. Add uma propriedade ao array
+	.reduce('novo valor','array') > transforma um array em outro tipo.
+	
+	
+	
+	
+operadores javascript
+
+-	Operador binário = operando1 operador operando2  //1+2 ou 3*4
+-	Operador unário = operando1 operador  // x++ ++1 k+=
+-	Módulo (%) = retorna o resto da operação de divisão  // 13%5 = 3 (pois 5*2=10 sobram 3 para 13)
+-	Incremento (++) e decremento (--) = Se vier antes (++2) já recebe o incremento naquela iteração se vier depois (2++) recebe na próxima iteração
+-	Exponenciação (**)
+
+- 	Spred
+	Usado para concatenar um array no meio de outro array. Ex:
+		
+		var partes = ['ombro', 'joelho'];
+		var musica = ['cabeça', ...partes, 'pes'];
+		
+		resultado > musica = ['cabeça','ombro', 'joelho','pes']
+	
+-	delete = Usado para deletar algo
+-	typeof = Muda o tipo de algo
+-	in = verifica se o objeto está na strign. Ex: onbject in array  // retorna verdadeiro ou falso
+-	instaceof = verifica se o objeto instancia algo // retorna verdadeiro ou falso
+
+
+
+estruturas condicionais
+
+-	if = se a consição for verdadeira executa aquele trecho do código
+-	swithc = se uma determinada expressão, o valor desta expressão for x executa uma função se for y executa outra função se for z outra (similar ao case). Pode ter um break (serve para que não execute o default)
+
+
+
+estruturas de repetição
+
+-	for = execute uma ação para uma condição em certo tempo. for(expressão inicial, condição, incremento){}
+-	while = executa enquanto a condição for verdadeira. Importante a condição de parada para não entrar em loop infinito
+-	do...while = Executa primeiro depois verifica a condição se é verdadeira ou não. do{}while()
+-	for-in/for-of = for-in > Executa expressão para objeto e para a propriedade. for-of > Executa só para o objeto
+-	break/continue = break executa a para da estrutura de repetição, mesmo que seja verdadeiro. continue faz com que a estrutura de repetição não execute aquele iteração
+
+
+
+
+
+
+

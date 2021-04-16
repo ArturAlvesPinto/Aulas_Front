@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Usando Fetch</title>
+</head>
+<body>
+
+<h1>Usando Fetch Pagina Sub.</h1>
+<h1>Aqui o data JSON será 4, 5 e 6</h1>
+
+</body>
+
+<script type="text/JavaScript">
+    //JavaScript ES6 Avançado.
+    //Fetch-Async-Await//Artur Alves
+                
+                
+    console.log('Fetch-Async-Await_______________________________________________________________');
+    //Como na página inicial só que o data é 4,5,6
+    
+    let url = "http://localhost:8080/sub"
+    let config = { method : 'POST' }
+    
+    fetch(url, config)
+    .then(responseStream => {return responseStream.json()})
+    .then(res=>{console.log(res)})
+    .catch((err)=>{console.log('Erro: ', err);})
+          
+    </script>
+
+</html>
+
+
+

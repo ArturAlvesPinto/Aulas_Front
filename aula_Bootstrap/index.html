@@ -1,0 +1,136 @@
+<!--Artur Alves Pinto-->
+<!--Aprendizado Bootstrap-->
+<!--As class deste documento referenciam os estilos no documento bootstrap.css-->
+
+<!--Você já conhece as listas básicas do HTML como <ol> e <ul>, porém no Bootstrap existe 
+a tag <dl> (Definition List) capaz de fazer listas de definições. Os elementos que vão 
+entre as tags <dl> e </dl> são de dois tipos: <dt> (Definition term) e <dd> (definition description).
+O texto entre <dt> e </dt> ficam em negrito e recebem o termo a ser definido, enquanto que
+o texto entre <dd> e </dd> recebem a descrição do termo-->
+
+<!DOCTYPE html>
+
+<head lang="pt-br">
+    <title>Página Inicial</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css"> <!--linkando arquivo bootstrap-->
+    <link rel="stylesheet" type="text/css" href="css/stylee.css"><!--linkando arquivo css-->
+</head>
+
+        <!--https://getbootstrap.com >> Documentation >> Components-->
+        <!--<button type="button" class="btn btn-primary">Primary</button>--> <!--Botão com formatação CSS do bootstrap-->
+        <!--Bootstrap é conjuto de estilos para class e components-->
+    
+    <!--Criando uma barra de navegação-->
+<header>
+    <nav class="navbar navbar-expand-lg navbar-dark"> <!--Aqui se defini as características estéticas da navegação-->
+        <a class="navbar-brand" href="#"> <!--Coloca-se # quando ainda não tem direcionamento da ação-->
+            <img src="img/logo.jpg" width="170px" height="90px">
+        </a>
+        
+        <div class="collapse navbar-collapse">
+            <ul class="navbar-nav"><!--ul é quando a lista não importa a ordem-->   
+                <li class="nav-item"><!--lista de ítens-->
+                    <a class="nav-link" href="#quemSomos">Quem somos ?</a>
+                </li>
+                <li class="nav-item"><!--lista de ítens-->
+                    <a class="nav-link" href="#parceiros">Parceiros</a>
+                </li>
+                <li class="nav-item"><!--lista de ítens-->
+                    <a class="nav-link" href="#servicos">Serviços</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+
+<body>
+    <!--- Quem Somos --------------------------------------------------------->
+    <section id="quemSomos"><!--Sections permite classificar um id para colocar como ação-->
+        <div class="container-fluid quem-somos text-center margin"> <!--Classes sao definidas a medida que que é acrescentado nome entre os aspas.-->
+                                                                    <!--Container cria a margem (caixa)-->
+                                                                    <!--Fluid considera a página inteira-->
+                                                                    <!--Text center centraliza o texto-->
+            <h3 class="bottom">Quem Somos?</h3>
+            <img src="img/time.jpg" class="rounded-circle" width="300px" height="300px"> <!--Round-circle é um class para deixar img rendonda-->
+            <p class="legenda">Somos um time comprometido com resultados</p>
+        </div><!--Importante trabalhar com container pois "delimita" o espaço-->
+    <hr class="featurette-divider">
+    </section>
+
+    <!--- Parceiros ---------------------------------------------------------> 
+    <section id="parceiros">
+        <div class="container-fluid text-center margin parceiros">
+            <h3 class="bottom">Conheça nossos parceiros. </h3>
+            <div class="container"><!--Delimita o espaço com o container-->
+                <div class="row"><!--Onde inicia de fato as colunas com row. Cada div será um coluna-->
+                    
+                    <!--#1 coluna------------------------------------------>
+                    <div class="col-lg-4"> <!--pode ser lg, md, sm ou xs,o que muda é o tamanho da tela-->
+                        <a href="https://www.google.com/search?client=opera-gx&hs=D5h&sxsrf=ALeKk021VJkr44SHhdiZQvxD_mRPOC8w-g%3A1602117427820&ei=M19-X7G5MefD5OUPl_O5qAU&q=batman&oq=batman&gs_lcp=CgZwc3ktYWIQAzIHCAAQsQMQQzIFCC4QsQMyBQguELEDMgUILhCxAzIFCC4QsQMyAgguMgUILhCxAzIFCC4QsQMyBQguELEDMgUIABCxAzoECAAQRzoECCMQJzoCCAA6BwgjEOoCECc6CAgAELEDEIMBOggILhCxAxCDAVDp7YABWJaEgQFgs4WBAWgBcAN4BIABnAOIAdARkgEJMC4yLjYuMC4xmAEAoAEBqgEHZ3dzLXdperABCsgBCMABAQ&sclient=psy-ab&ved=0ahUKEwjxnrHB4KPsAhXnIbkGHZd5DlUQ4dUDCAw&uact=5"
+                        target="blank"> <!--Para que seja aberto em uma nova guia-->
+                        <img src="img/parc1.jpg" class="rounded-circle" width="180px" height="180px" width="100%">
+                        </a>
+                    </div>
+                    <!--#2 coluna------------------------------------------>
+                    <div class="col-lg-4">
+                        <a href="https://www.google.com/search?client=opera-gx&hs=lL3&sxsrf=ALeKk03c8_ONGQ4K6qsFZABIKqutHjwU-g%3A1602119736379&ei=OGh-X-nHFrXN5OUPxfWxoAM&q=capitão+america&oq=capitão+ame&gs_lcp=CgZwc3ktYWIQAxgAMgQIIxAnMgIILjICCC4yAggAMgIILjICCAAyAggAMgIIADICCAAyAggAOgQIABBHOgUIABCxAzoICC4QsQMQgwE6BQguELEDOgcIABCxAxBDOgQIABBDUIbUAli03wJg8uQCaABwBHgAgAG6AogB7BGSAQcwLjUuNS4xmAEAoAEBqgEHZ3dzLXdpesgBCMABAQ&sclient=psy-ab"
+                        target="blank">
+                        <img src="img/parc2.jpg" class="rounded-circle" width="180px" height="180px" width="100%">
+                        </a>
+                    </div>
+                    <!--#3 coluna------------------------------------------>
+                    <div class="col-lg-4">
+                        <a href="https://www.google.com/search?client=opera-gx&hs=u1N&sxsrf=ALeKk02DNs-C0D00cdNhXXx8LXLLwvXr4w%3A1602119783764&ei=Z2h-X7KgLtm55OUP8rC7oAY&q=flash&oq=flash&gs_lcp=CgZwc3ktYWIQAzIICC4QsQMQkwIyBQguELEDMggIABCxAxCDATIFCAAQsQMyBQgAELEDMgUILhCxAzIFCAAQsQMyBQguELEDMgUIABCxAzIFCAAQsQM6BAgAEEc6BwgjEOoCECc6CggAEOoCELQCEEM6CgguEOoCELQCEEM6BAgjECc6CAguELEDEIMBOgIIADoCCC46CwguELEDEIMBEJMCOgQILhBDOgQIABADSgkIkU4SBDAsNjdQ8dYBWMvgAWC94gFoAXACeAGAAdsBiAGBCJIBBTAuMi4zmAEAoAEBqgEHZ3dzLXdperABCsgBCMABAQ&sclient=psy-ab&ved=0ahUKEwjy7-Sk6aPsAhXZHLkGHXLYDmQQ4dUDCAw&uact=5"
+                        target="blank">
+                        <img src="img/parc 3.jpg" class="rounded-circle" width="180px" height="180px" width="100%">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <hr class="featurette-divider">
+    </section>
+
+    <!--- Serviços --------------------------------------------------------->
+    <section id="servicos">
+        <div class="container-fluid text-center margin">
+            <h3 class="bottom">Quais são nossos Serviços?</h3>
+            <div class="container bottom">
+                <div class="row">
+                    <div class="col-md-6"><!--col-lg-* = O Bootstrap tem no max 12 colunas então-->
+                                          <!--o asterísco será um numero que multiplicado pela-->
+                                          <!--quantidade de coluna resultará 12-->
+                        <h4 class="bottom">Sites</h4>
+                        <p class="lead text-left"> Desenvolvemos um site para sua empresa. Você verá como é rápido e fácil!</p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/site.jpg" width="80%">
+                    </div>
+                </div>
+            </div>
+            <hr class="featurette-divider">
+            <div class="container margin">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="img/atendimento.jpg" width="80%">
+                    </div>
+                    <div class="col-md-6">
+                        <h4 class="bottom">Atendimento</h4>
+                        <p class="lead text-left"> Prestamos o melhor atendimento caso seja necessário ou tenha qualquer dúvida na utilização do seu novo site</p>
+                    </div>
+                </div>
+            </div>
+            <hr class="featurette-divider">
+        </div>
+    </section>
+</body>
+
+<footer class="text-center rodape">
+    <p>Desenvolvido por Artur Alves.</p>
+</footer>
+
+
+
+
+    

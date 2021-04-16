@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Usando Fetch</title>
+</head>
+<body>
+
+<h1>Usando Fetch  Página Inicial.</h1>
+<h1>Aqui o data JSON será 1, 2 e 3</h1>
+
+</body>
+
+<script type="text/JavaScript">
+    //JavaScript ES6 Avançado.
+    //Fetch-Async-Await-EventEmmiter
+    //Artur Alves
+    //Chamadas em 0-server.js
+    
+
+// Async Await ----------------------------------------------------------------------------------------------------|
+    // Tradicionalmente para fazer requisições era utilizado um api do browser chamado xmlhttprequest
+    // Atualmente existe uma nova api chamado fetch, porém trabalha com promisses e não callbak.
+    // No fetch voce informa o local e o método. Então terá a resposta (res) definida na arrow function. Então você pode utilizar o res aqui.
+    // Caso tenha um erro de rede será pego no catch. Fetch só acontece um erro de rede. Para trarar status é preciso fazer separadamente.
+    //Ex, chamada para o local host:
+
+    //let url = "http://localhost:8081" //Para forçar erro de rede. Porta sem resposta.
+    let url = "http://localhost:8080"
+    let config = { method : 'POST' }
+
+    let functionFetch = ()=>{
+        console.log('\nFetch_______________________________________________________________');
+        fetch(url, config)
+        .then(responseStream => {
+            console.log(responseStream) // Ver caractrísticas do obj
+            if(responseStream.status === 200)  // se tem status http 200 ("OK")
+            {
+                return responseStream.json()  // Retorna o json
+            }else{
+               throw new Error('Request error'); // caso caso contrário trataiva erro de status.
+            }
+        })
+        .then(res => {console.log(res);})
+        .catch((err)=>{console.log('Erro: ', err);})
+    }
+
+
+// Async Await ----------------------------------------------------------------------------------------------------|    
+
+    //Este trecho vai ser executado só depois do fetch acima
+    // Async = Uma forma de criar promisses e lidar de maneira mais simples
+    //com promises dentro de promises.
+    //Await = Usado junto com o async, é uma forma de aguardar que a promise
+    //seja resolvida para continuar o fluxo. Processamento assíncrono sequencial.
+    
+
+    const asyncTimer = () => new Promise((resolve, reject) => {
+     setTimeout(()=>{
+            console.log('\nAsync-Await_______________________________________________________________');
+            resolve('Após o Fetch acima executou-se este trecho!')
+        }, 1000);
+    })
+
+    const simpleFunc = async ()=>{
+    // throw new Error ('Oh no!'); //Descomentar para simular erro, podemos trata erros com um catch como na promisse.
+        const data1 = await Promise.all([
+            asyncTimer(),
+            functionFetch()
+        ]);//asyncTimer(); // espera 1000ms e o functionFecth para responder
+        return data1;
+    };
+
+
+    simpleFunc().then((data1) => {
+        console.log(data1); // retorna a promise resolvida
+    }).catch(err =>{
+        console.log(err);
+    })
+    
+    </script>
+
+</html>
+
+
+

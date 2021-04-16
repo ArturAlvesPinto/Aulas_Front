@@ -1,0 +1,116 @@
+JavaScript Orientação a Objetos:
+
+
+-	Herança = Baseado em protótipos (prototype - uma variavel que armazena as definições do nosso objeto)
+				toda vez que uma variável é criada ela te um __proto__ onde é apontado seu tipo. Este tipo é chamado "constructor" (const)
+				tudo isto é feito por debaixo dos panos no JS.
+				
+				variavel__proto__ === variavel.prototype
+				
+				
+				exemplo:
+				
+				Obejeto.split('')  // quebra uma string em array usando um delimatador (por padrão).
+				String.prototype.split = function(){console.log('ixe...')}  //  agora o comando objeto.split('') teve seu reotrno alterado e quando executado reponderá ixe... no console.
+				
+				Então eu posso definir uma função que será retornada com o comando objeto.algumacoisaaqui()
+				
+				
+				Quando utilizado a função new Foo(...);
+				
+				1.	Um objeto é criado , herdando Foo.prototype
+				2.	A função construtura Foo é chamada com os argumentos específicados e com o 'this' vinculado ao novo objeto criado
+				3.	Caso a função construtora tenha um retorno explícito, será respeitado o seu return. Senão será retornado o objeto criado no passo 1.
+				
+				
+
+-	Classe = Simplificação da herança protótipos
+			chamado por "class"
+			
+			Exemplo 1: 
+			class Person{
+				constructor(name){
+					this.name = name;   // quando executado objeto.name() retornará name -- É a mesma coisa que o prototype só mudou a sintaxe
+				}
+			}
+			
+			class PessoaF extends Person{	// como se eu estivesse fazendo mais um herança
+				constructor(name,cpf){
+					super (name)			// super() passa o constructor de onde é herdado (pai)
+					this.cpf = cpf;
+				}
+			}
+			
+			
+			
+			
+			Exemplo 2 (usando get e set):
+			
+			class Person{#name = '';}
+			constructor(name){this.#name = name;}
+			
+			get name(){return this.#name;}
+			set name(name){this.#name = name}
+			
+			
+			
+			
+			
+-	Modificadores de acesso
+
+			js não tem modificadores de acesso (está sendo lançado em node, mas não tem suporte nos browsers)
+			
+			Controle do que é privado e do que é público dentro da class;
+			
+			# => É o que determina que uma variável é privado. Sempre quando referenciado tem que colocar o # na frente.    > #variavel
+			
+			
+			
+-	Encapsulamente
+
+		Ocultar detalhes do funcionamento interno
+		
+-	Static
+
+		Permiti acessar métodos e atributos sem instanciar um elemento da classe
+		Abaixo um exemplo que faz a mesma coisa, etretato um usando function e o outro o class e static
+		
+		Exemplo:
+		
+		function Person(){}													class	Person{
+		
+		Peson.walk = function(){console.log('walking...');}						static walk(){console.log('walking...')}
+		
+		console.log(Person.walk());   // "walking..."						console.log(Person.walk());   // "walking..."
+		
+		
+
+-	Design	patterns (padrões de projeto)
+
+		São solucçoes generalistas para problemas recorrentes durante o desenvolvimento de um software.
+		Não é um framework nem um codigo pronto.
+		Definição de alto nível de como um problema pode ser solucionado.
+		
+		A Pattern Language (Livro) - 1978 - Christopher, Sara, Murray
+		Design Pattern: Elements of Reusable Object-Orientate (Livro) - 1994 - Erich, Richard, Ralph e John
+		
+		Formato de um pattern:
+			Nome > Exemplo > Contexto > Problema > Solução
+		
+		Tipos de Pattern:
+			Criação - Abstraem ou adiam criação de objetos.
+			Estruturais - Se preocupa como class e objetos são formados.
+			Comportamentais - Lida com o algorítimo e atribuição de responsabilidade entre objetos.
+			
+		Patterns mais utilizados no JS:
+			Factory	- Funções que retornam objetos sem necessidade de chama-los com new.
+			Singleton - Objetivo é criar uma unica instancia de uma função construtora e retorná-la toda vez em que for necessário utilizá-la. (Ex: jQuery) 
+			Decorator - Função decorator recebe uma outra função como parametro e estende o seu comportamento sem modifica-la explicitamente. (Da pra usar com Typescript. Também tem no angular)
+			Observer - Muito popular me js. Mantém um coleção de objetos (observer) e notifica todos eles quando ocorrem mudanças de estados. (Vue e RxJs)
+			Module - Possibilita organizar o codigo, sem necessidades de expor um variável global.
+
+
+
+
+
+

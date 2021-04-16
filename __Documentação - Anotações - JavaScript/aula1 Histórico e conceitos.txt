@@ -1,0 +1,68 @@
+aula JAVASCRIPT - ES6 essencial;
+
+-	Histórico
+	
+		Lançado em setembro de 1995
+		Criado por Brendan Eich
+	
+-	ECMAScript
+		
+		É uma especificação da linguagem de programação, servindo como base para implementar
+		outras linguagens de script (js, jatscript e actionscript)
+		
+		TC39 - Comite responsável pela comissão do javascript. São realizadas várias propostas de melhorias.
+		
+		Fluxo de propostas do comite:
+			Stage 0: Revisa aproposta e adiciona os documentos da mesma. (strawman)
+			Stage 1: Ter escrito e exemplo do que é a proposta. (proposal)
+			Stage 2: Descrição formal da sintaxe e semnatica. (draft)
+			Stage 3: Deve ter pelo menos duas implementações e deve ser aprovado pelo diretor TC39. (candidate)
+			Stage 4: Tem que passar na switch de testes. Tem que ter aplicação solida (finished)
+		
+		Babel (http://babeljs.io/)
+			É um transpilador de javascript. Pega a implementação da funcionalidade nova e tranforma em uma que mais browsers tem suporte.
+			
+-	Conceitos Javacript
+		
+		Liguagem interpretada. Tambem possui tipagem fraca e dinâmica (Não há verificações nos elementos do código). Exemplo:
+		Você pode somar uma string com um number (concatenando)
+		
+		Checador de tipagem
+		Typescript (http://www.typescriptlang.org/);
+		
+		Flow (http://flow.org/en/);
+		
+-	Funções de primeira classe e ordem maior
+		
+		Pode ser atribuido a uma classe ou estrutura de dados.
+		Pode ser passado por argumentos.
+		Pode ser retornada.
+		
+-	Closure
+	Capacidade de uma função lembrar onde ela foi criada.
+	
+-	Currying
+	Transforma uma função com n parametros em apenas uma função que recebi um parametro e para cada parametro é retornado para cada função.
+	
+-	Hoisting
+	Levantar ou suspender algo.
+	Ocorre em declarações de variáveis ou funções.
+	Hoisting de variáveis só eleva a criação da variável e não sua atribuição.
+	Hoisting de função é elevada como um todo.
+	
+-	Imutabilidade
+	Dados nunca mudam.
+	
+-	Escopos:
+	global = Na raiz do código;
+	blocos = Entre chaves;
+	funcao = Quando chamado uma função;
+
+-	Variáveis (var) = Definição escopo global se for uma variável global. Não respeita escopo de blocos, tem que ter cuidado.
+-	let = deve ser usado no escopo de bloco, isto e entre chaves
+-	const = deve ser tambem no escopo de blocos
+		
+		
+		
+		
+		

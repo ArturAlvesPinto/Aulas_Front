@@ -1,0 +1,38 @@
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar{
+    background-color: rgb(33, 34, 36);
+}
+.quem-somos{
+    background-color: rgb(133, 189, 198);
+    color: rgb(33, 34, 36);
+}
+
+.margin{
+    padding-top: 25px; /*Padding cria uma margem interna sem deixar o espaçamento branco*/
+    padding-bottom: 25px;
+}
+
+.legenda{
+    padding-top: 15px;
+    font-style: oblique ; /*Defini que as legendas serão em itálico*/
+}
+
+.parceiros{
+    background-color: rgb(198, 223, 221);
+}
+
+.bottom{
+    padding-bottom: 40px;
+}
+
+.rodape{
+    color: honeydew;
+    background-color: rgb(33, 34, 36);
+    padding-bottom: 20px;
+    padding-top: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}

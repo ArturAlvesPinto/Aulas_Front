@@ -1,0 +1,38 @@
+# Aula de teste TDD e BDD:
+
+## Testes Automatizados
+
+* Testes Unitários -  papel de testar menor unidade do código.
+* Testes integrados - testam integração entre as pequenas partes anteriores, integra partes do próprio código.
+* Testes Funcionais - testam a integração do seu sistema com outros sistemas. Pecorre todo fluxo, (visão normalmente do usuário).
+
+## Testes Manuais/Automatizados Exemplos:
+
+* Teste de usuabilidade;
+* Teste de aceitação
+* Protótipos;
+* Teste funcionais;
+* Exemplos;
+Alpha, Beta, etc...
+
+## Ferramentas de testes:
+
+* Teste de carga, Teste de segurança, Mais . . .
+
+
+# TDD (Test Driven Development)
+
+É um dos pilares do Extreme Programming, consiste em testar e refatorar em pequenos ciclos, onde você escreve "antes" do código, fazendo o mesmo passar e refatorar o código. Uma maneira de "forçar" possíveis erros durante a elaboração do script.
+
+    Etapas ?        Escrita do teste -> Escrita do código -> Refatoração
+
+    Vantagens ?     Feedback rápido, Maior segurança para alterações e novas funcionalidades, código  mais limpo, e principalmente maior produtividade.
+
+
+# BDD (Behavior Driven Development)
+
+Técnica de desenvolvimento ágil que visa juntar regra de negócio com linguagem de programação. Seria documentar a regra de negócio e implementar esta operação para sempre direcionar o código. Visa a pensar no comportamento antes de sair codando.
+
+    Pilares ?       Testes; Documentação; Exemplos.
+
+    Vantagens ?     Compartilhamento de conhecimento; Documentação dinâmica; Visão do todo.

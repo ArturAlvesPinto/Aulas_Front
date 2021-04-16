@@ -1,0 +1,30 @@
+<!--Artur Alves Pinto-->
+<!--Aula Javascript-->
+
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+    <head>
+        <title>MINHA PÁGINA</title>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="js/main.js"></script>
+    </head>
+
+    <body onload="load()"> <!--Ação na hora que a página carrega-->
+        <!--Chama o js no html-->
+        <!--<script></script>-->
+        <h1>Minha Página.</h1>
+        <button type="button" onclick="botao()">Clique aqui</button><!--Cria um botão e interegi o mesmo com funcao JS-->
+        <p id="click" onclick="redirecionar()"></p>
+        <p id="mousemove" onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui</p> <!--mouseover ação quando passa o mouse no local e o onmouseout ação qunado o mouse não está no local.-->
+        <p id="mousemove2" onmouseover="trocar(this)" onmouseout="voltar(this)">Passe o mouse aqui</p> <!--O this é usado para passar o próprio parametro como elemento-->
+        <!--Neste último caso nem precisaria do id-->
+        <select onchange="funcaoChange(this)"> <!--onchage permite pegar valores diferentes.-->
+            <option value="1">Valor 1</option>
+            <option value="2">Valor 2</option>
+            <option value="3">Valor 3</option>
+        </select>
+    </body>
+
+</html>

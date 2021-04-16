@@ -1,0 +1,51 @@
+/*Artur Alves*/
+/*Código desenvolvido para aprendizado*/
+/*CSS é usado para dar um style na página*/
+/*É preciso informar no html que tem que olhar para um CSS que está em outro arquivo. usa o link lá no html*/
+
+
+/*body você consegue definir qual a característica do seu body no html*/
+
+body{
+    background-image:url("background.jpg"); /*Definindo uma imagem como plano de fundo.*/
+    background-size: 150%; /*Definindo o tamanho do background img*/
+    color: whitesmoke;
+    margin-left: 150px; /*Definição de margem*/
+    margin-right: 150px;  
+}
+
+header{
+    margin-bottom: 100px;
+    text-align: center; /*Usado para centralizar o elemento.s*/
+}
+
+h1{
+    color:whitesmoke; /*Consigo definir as cores de cada elemento do site*/
+    font-family: 'Franklin Gothic Medium'; /*Definição da fonte do título h1*/
+}
+
+h2{
+    color:whitesmoke; /*Consigo definir as cores de cada elemento do site*/
+    font-family: 'Franklin Gothic Medium';
+}
+
+.rodape{
+    display: grid;
+}
+    * {box-sizing: border-box;}
+
+footer{
+    text-align: center;
+    background-color: rgb(165, 191, 199);
+    margin-bottom: 100px;
+    margin-top: 100px;
+    color:black;
+}
+
+.img_logo{
+    margin-left: 35px;
+}
+
+p{
+    font-size: 18px;  /*Defini o tamanho das letras no elemento p*/
+}
